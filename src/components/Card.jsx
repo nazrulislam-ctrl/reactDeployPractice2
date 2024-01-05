@@ -1,4 +1,15 @@
+import { useState } from "react";
+
 function Card() {
+  const[counter, setCount]= useState(0);
+  const increment=()=>{
+    setCount(counter+1);
+  }
+  const decrement=()=>{
+    if(counter>0){
+      setCount(counter-1);
+    }
+  }
   return (
     <>
       <div className="card w-96 bg-base-100 shadow-xl">
@@ -12,7 +23,10 @@ function Card() {
           <h2 className="card-title">Shoes!</h2>
           <p>If a dog chews shoes whose shoes does he choose?</p>
           <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
+            <button onClick={increment} className="btn btn-success">+</button>
+            <button className="btn btn-primary">{counter} Items</button>
+            <button  onClick={decrement} className="btn btn-error">-</button>
+            <button onClick={increment} className="btn btn-info ml-6">Order Now</button>
           </div>
         </div>
       </div>
