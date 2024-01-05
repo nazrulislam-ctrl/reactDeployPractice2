@@ -25,8 +25,8 @@ function Card() {
           <div className="card-actions justify-end">
             <button onClick={increment} className="btn btn-success">+</button>
             <button className="btn btn-primary">{counter} Items</button>
-            <button  onClick={decrement} className="btn btn-error">-</button>
-            <button onClick={increment} className="btn btn-info ml-6">Order Now</button>
+            <button onClick={decrement} className="btn btn-error">-</button>
+            <button className="btn btn-info ml-5">Order Now</button>
           </div>
         </div>
       </div>
